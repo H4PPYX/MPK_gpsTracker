@@ -14,10 +14,10 @@ Config::Config() {
   return;
 }
 
-static std::string Config::getServIP(){
+std::string Config::getServIP(){
   return serv_ip;
 }
 
-static std::string Config::getVehID(){
+std::string Config::getVehID(){
   return veh_id;
 }
