@@ -1,4 +1,4 @@
-Software for retrieving gps location and sending it to remote server for
+Software for retrieving gps location and time, then sending it to remote server for
 vehicle tracking service.
 
 SIM7000X is a folder with source code of Waveshare Raspberry Pi library for
