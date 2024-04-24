@@ -18,6 +18,6 @@ void GPS::fetchTime(std::string gpsTime){
 void GPS::updateGPSdata() {
   GPS::gps_lat = "0";
   GPS::gps_lon = "0";
-  GPS::time = GPS::fetchTime("20240424182716");
+  GPS::fetchTime("20240424182716");
   return;
 }
