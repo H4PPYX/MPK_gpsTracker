@@ -15,9 +15,9 @@ Config::Config() {
 }
 
 std::string Config::getServIP(){
-  return serv_ip;
+  return Config::serv_ip;
 }
 
 std::string Config::getVehID(){
-  return veh_id;
+  return Config::veh_id;
 }
