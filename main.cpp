@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main() {
-  Config conf();
+  Config conf;
   std::cout<<conf.getVehID()<<";"<<conf.getServIP()<<std::endl;
   return 0;
 }
