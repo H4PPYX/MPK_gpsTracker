@@ -2,9 +2,9 @@
 
 GPS::GPS(){}
 GPS::~GPS(){}
-std::string GPS::gps_lat;
-std::string GPS::gps_lon;
-std::string GPS::time;
+//std::string GPS::gps_lat;
+//std::string GPS::gps_lon;
+//std::string GPS::time;
 
 std::string GPS::getGPSdata(){
   return GPS::gps_lat + ";" + GPS::gps_lon + ";" + GPS::time;
@@ -18,6 +18,6 @@ void GPS::fetchTime(std::string gpsTime){
 void GPS::updateGPSdata() {
   GPS::gps_lat = "0";
   GPS::gps_lon = "0";
-  GPS::time = "20240424182716"
+  GPS::time = "20240424182716";
   return;
 }
