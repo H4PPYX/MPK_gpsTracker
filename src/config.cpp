@@ -2,6 +2,9 @@
 #include <iostream>
 #include <fstream>
 
+std::string Config::serv_ip;
+std::string Config::veh_id;
+
 Config::Config() {
   std::ifstream ifile("config.txt");
   std::string confline;
