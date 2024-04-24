@@ -7,9 +7,9 @@ Config::Config() {
   std::string confline;
   getline(ifile, confline);
   int delimiterPos = confline.find(';');
-  serv_ip = confline.substr(0, delimiterPos);
+  Config::serv_ip = confline.substr(0, delimiterPos);
   confline.erase(0, delimiterPos+1);
-  veh_id = confline;
+  Config::veh_id = confline;
   ifile.close();
   return;
 }
