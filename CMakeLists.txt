@@ -4,4 +4,4 @@ project(MPK_gpsTracker)
 
 include_directories(src/ include/)
 
-add_executable(tracker src/* include/* main.cpp)
+add_executable(tracker src/config.cpp include/config.h main.cpp)
