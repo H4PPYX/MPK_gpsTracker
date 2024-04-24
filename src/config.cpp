@@ -1,6 +1,6 @@
 #include "config.h"
 #include <iostream>
-#include <ifstream>
+#include <fstream>
 
 void Config::Config() {
   ifstream ifile("config.txt");
