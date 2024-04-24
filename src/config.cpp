@@ -24,3 +24,5 @@ std::string Config::getServIP(){
 std::string Config::getVehID(){
   return Config::veh_id;
 }
+
+Config::~Config() {}
