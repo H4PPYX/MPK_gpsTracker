@@ -7,6 +7,6 @@ class Config {
     static std::string getServIP();
     static std::string getVehID();
   private:
-    std::string serv_ip;
-    std::string veh_id;
+    static std::string serv_ip;
+    static std::string veh_id;
 };
