@@ -11,4 +11,4 @@ class GPS {
     std::string gps_lat;
     std::string time;
     void fetchTime(std::string gpsTime);
-}
+};
