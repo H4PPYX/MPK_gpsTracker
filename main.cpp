@@ -1,6 +1,8 @@
+#include "config.h"
 #include <iostream>
 
 int main() {
-  std::cout<<"test\n";
-  return 1;
+  Config conf();
+  std::cout<<conf.getVehID()<<";"<<conf.getServIP()<<std::endl;
+  return 0;
 }
