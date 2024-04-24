@@ -2,8 +2,8 @@
 #include <iostream>
 #include <fstream>
 
-void Config::Config() {
-  ifstream ifile("config.txt");
+Config::Config() {
+  std::ifstream ifile("config.txt");
   std::string confline;
   getline(ifile, confline);
   int delimiterPos = confline.find(';');
@@ -14,10 +14,10 @@ void Config::Config() {
   return;
 }
 
-std::string Config::getServIP() Static{
+static std::string Config::getServIP(){
   return serv_ip;
 }
 
-std::string Config::getVehID() Static{
+static std::string Config::getVehID(){
   return veh_id;
 }

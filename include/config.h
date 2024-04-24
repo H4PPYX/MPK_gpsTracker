@@ -4,8 +4,8 @@ class Config {
   public:
     Config();
     ~Config();
-    std::string getServIP() static;
-    std::string getVehID() static;
+    static std::string getServIP();
+    static std::string getVehID();
   private:
     std::string serv_ip;
     std::string veh_id;
