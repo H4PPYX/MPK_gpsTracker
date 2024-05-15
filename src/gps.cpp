@@ -21,3 +21,22 @@ void GPS::updateGPSdata() {
   GPS::fetchTime("20240424182716");
   return;
 }
+
+/*
+
+1,0,,,,,,,0,,,,,,21,,,,,36,,
+
+OK
+The GPS position message is not correct,please waiting...
+The GPS position message is:
+1,1,20240515124136.000,51.117769,17.030160,116.900,0.00,318.4,1,,1.1,,,,21,5,,,,36,,
+
+OK
+UTC time is :20240515124136
+Latitude is :51.117769
+Longitude is :17.030160,
+Turn off the GNSS power.
+^C
+
+
+*/
