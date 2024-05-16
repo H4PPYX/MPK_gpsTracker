@@ -35,11 +35,11 @@
 #include <sys/mman.h>
 #include <string.h>
 #include <time.h>
-#include <termios.h> 
+#include <termios.h>
 #include <ctype.h>
 #include <sys/ioctl.h>
 #include <limits.h>
-#include <algorithm>
+#include <algorithm.h>
 #include <limits.h>
 #include <pthread.h>
 #include <poll.h>
@@ -161,7 +161,7 @@
 
 
 /// Defines for SPI
-/// GPIO register offsets from BCM2835_SPI0_BASE. 
+/// GPIO register offsets from BCM2835_SPI0_BASE.
 /// Offsets into the SPI Peripheral block in bytes per 10.5 SPI Register Map
 #define BCM2835_SPI0_CS                      0x0000 ///< SPI Master Control and Status
 #define BCM2835_SPI0_FIFO                    0x0004 ///< SPI Master TX and RX FIFOs
@@ -192,8 +192,8 @@
 #define BCM2835_SPI0_CS_TA                   0x00000080 ///< Transfer Active
 #define BCM2835_SPI0_CS_CSPOL                0x00000040 ///< Chip Select Polarity
 #define BCM2835_SPI0_CS_CLEAR                0x00000030 ///< Clear FIFO Clear RX and TX
-#define BCM2835_SPI0_CS_CLEAR_RX             0x00000020 ///< Clear FIFO Clear RX 
-#define BCM2835_SPI0_CS_CLEAR_TX             0x00000010 ///< Clear FIFO Clear TX 
+#define BCM2835_SPI0_CS_CLEAR_RX             0x00000020 ///< Clear FIFO Clear RX
+#define BCM2835_SPI0_CS_CLEAR_TX             0x00000010 ///< Clear FIFO Clear TX
 #define BCM2835_SPI0_CS_CPOL                 0x00000008 ///< Clock Polarity
 #define BCM2835_SPI0_CS_CPHA                 0x00000004 ///< Clock Phase
 #define BCM2835_SPI0_CS_CS                   0x00000003 ///< Chip Select
@@ -325,7 +325,7 @@ public:
 	void println(float f, int precission);
 	int write(unsigned char message);
 	int write(const char *message);
-	int write (char *message, int size);   
+	int write (char *message, int size);
 	void flush();
 	void setTimeout(long millis);
 	void end();
