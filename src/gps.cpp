@@ -1,6 +1,9 @@
 #include "gps.h"
 
-GPS::GPS(){}
+GPS::GPS(sim7x00 &device){
+    GPS::sim7000 = device;
+    GPS::sim7000.Power_On();
+}
 GPS::~GPS(){}
 //std::string GPS::gps_lat;
 //std::string GPS::gps_lon;
@@ -16,6 +19,8 @@ void GPS::fetchTime(std::string gpsTime){
 }
 
 void GPS::updateGPSdata() {
+  sim7000.Send_AT_Command("ATI",2000);
+  while( Serial.available() > 0) Serial.read();
   GPS::gps_lat = "0.000000";
   GPS::gps_lon = "0.000000";
   GPS::fetchTime("20240424182716");
