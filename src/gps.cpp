@@ -1,7 +1,6 @@
 #include "gps.h"
 
-GPS::GPS(sim7x00 &device){
-    GPS::sim7000 = device;
+GPS::GPS(sim7x00 &device): GPS::sim7000(device) { 
     GPS::sim7000.Power_On();
 }
 GPS::~GPS(){}
