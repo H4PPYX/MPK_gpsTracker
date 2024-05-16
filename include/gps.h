@@ -4,7 +4,7 @@
 
 class GPS {
   public:
-    GPS(sim7x00 &device);
+    GPS(sim7x00 device);
     ~GPS();
     std::string getGPSdata();
     void updateGPSdata();
