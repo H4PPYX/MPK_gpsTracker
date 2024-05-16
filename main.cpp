@@ -1,7 +1,7 @@
 #include "config.h"
 #include "gps.h"
 #include <iostream>
-#include <ofstream>
+#include <fstream>
 
 
 int main() {
