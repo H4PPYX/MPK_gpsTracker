@@ -39,7 +39,7 @@
 #include <ctype.h>
 #include <sys/ioctl.h>
 #include <limits.h>
-#include <algorithm.h>
+#include <algorithm>
 #include <limits.h>
 #include <pthread.h>
 #include <poll.h>

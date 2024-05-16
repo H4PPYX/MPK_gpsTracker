@@ -17,7 +17,6 @@
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
-#include <arduPi.h>
 
 #define BCK2835_LIBRARY_BUILD
 #include "bcm2835.h"
