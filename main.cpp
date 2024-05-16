@@ -6,7 +6,7 @@
 int main() {
 
   Config conf;
-  sim7x00 sim7000 = sim7x00();/*
+  sim7x00 sim7000 = sim7x00();
   GPS track(sim7000);
 
   while(true){
