@@ -26,7 +26,8 @@ void GPS::updateGPSdata() {
 
 
         Send_AT_Command("AT+CGNSPWR=1",2000,"OK")
-        char answer = 0, x = 0;
+        char answer = 0;
+        char x = 0;
         char gps_buffer[200];
         memset(gps_buffer,'\0',200);
         delay(2000);
