@@ -13,5 +13,7 @@ class GPS {
     std::string gps_lon;
     std::string gps_lat;
     std::string time;
-    void fetchTime(std::string gpsTime);
+    void fetchTime(std::string buffer);
+    void fetchLat(std::string buffer);
+    void fetchLon(std::string buffer);
 };
