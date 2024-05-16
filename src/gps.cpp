@@ -14,8 +14,18 @@ std::string GPS::getGPSdata(){
   return GPS::gps_lat + ";" + GPS::gps_lon + ";" + GPS::time;
 }
 
-void GPS::fetchTime(std::string gpsTime){
-  GPS::time = ("" + gpsTime.substr(4,4) + "-" + gpsTime.substr(8,2) + "-" + gpsTime.substr(10,2) + " " + gpsTime.substr(12,2) + ":" + gpsTime.substr(14,2) + ":" + gpsTime.substr(16,2));
+void GPS::fetchTime(std::string buffer){
+  GPS::time = ("" + buffer.substr(4,4) + "-" + buffer.substr(8,2) + "-" + buffer.substr(10,2) + " " + buffer.substr(12,2) + ":" + buffer.substr(14,2) + ":" + buffer.substr(16,2));
+  return;
+}
+
+void GPS::fetchLat(std::string buffer) {
+  GPS::gps_lat = buffer.substr(23, 9);
+  return;
+}
+
+void GPS::fetchLon(std::string buffer) {
+  GPS::gps_lon = buffer.substr(33, 9);
   return;
 }
 
@@ -66,7 +76,7 @@ void GPS::updateGPSdata() {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-  GPS::gps_lat = "0.000000";
+  GPS::fetchLat(gps_buffer);
   GPS::gps_lon = "0.000000";
   GPS::fetchTime(gps_buffer);
   return;
