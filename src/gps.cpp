@@ -1,6 +1,6 @@
 #include "gps.h"
 
-GPS::GPS(sim7x00 device): sim7000(device) { 
+GPS::GPS(sim7x00 device): sim7000(device) {
     GPS::sim7000.Power_On();
 }
 GPS::~GPS(){}
@@ -19,10 +19,60 @@ void GPS::fetchTime(std::string gpsTime){
 
 void GPS::updateGPSdata() {
   sim7000.Send_AT_Command("ATI",2000);
-  while( Serial.available() > 0) Serial.read();
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+        Send_AT_Command("AT+CGNSPWR=1",2000,"OK")
+        char answer = 0, x = 0;
+        char gps_buffer[200];
+        memset(gps_buffer,'\0',200);
+        delay(2000);
+        while(answer == 0) {
+
+          Send_AT_Command("AT+CGNSINF",2000,"+CGNSINF: ")
+          while(Serial.available()==0);
+
+          do {
+
+            if(Serial.available()>0)
+              gps_buffer[x++] = Serial.read();
+
+            if(strstr(gps_buffer,"OK") != NULL) {
+
+              if(strstr(gps_buffer,",,,,,") == NULL) {
+
+                gps_buffer[x]='\0';
+                answer = 1;
+
+              } else {
+
+                memset(gps_buffer,'\0',x);
+                x = 0;
+                delay(2000);
+
+              }
+
+            }
+
+          } while((answer == 0)&&(x > 0));
+
+        }
+
+            Get_UTC_Time(gps_buffer);
+            Get_Latitude(gps_buffer);
+            Get_Longitude(gps_buffer);
+
+        Send_AT_Command("AT+CGNSPWR=0",2000,"OK");
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+  std::string tmp;
+  strncpy(tmp, strchr(strchr(gps_buffer, ','), ','), 14); //date
   GPS::gps_lat = "0.000000";
   GPS::gps_lon = "0.000000";
-  GPS::fetchTime("20240424182716");
+  GPS::fetchTime(tmp);
   return;
 }
 
