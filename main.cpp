@@ -12,7 +12,7 @@ int main() {
   while(true){
     track.updateGPSdata();
     std::cout<<track.getGPSdata()<<std::endl;
-    std::cout<<conf.getVehID()<<";"<<conf.getServIP()<<std::endl;
+    //std::cout<<conf.getVehID()<<";"<<conf.getServIP()<<std::endl;
     delay(1000);
   }
   return 0;
