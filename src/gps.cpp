@@ -77,7 +77,7 @@ void GPS::updateGPSdata() {
 ////////////////////////////////////////////////////////////////////////////////
 
   GPS::fetchLat(gps_buffer);
-  GPS::gps_lon = "0.000000";
+  GPS::fetchLon(gps_buffer);
   GPS::fetchTime(gps_buffer);
   return;
 }
