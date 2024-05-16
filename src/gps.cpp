@@ -15,7 +15,7 @@ std::string GPS::getGPSdata(){
 }
 
 void GPS::fetchTime(std::string gpsTime){
-  GPS::time = ("" + gpsTime.substr(5,4) + "-" + gpsTime.substr(9,2) + "-" + gpsTime.substr(11,2) + " " + gpsTime.substr(13,2) + ":" + gpsTime.substr(15,2) + ":" + gpsTime.substr(17,2));
+  GPS::time = ("" + gpsTime.substr(4,4) + "-" + gpsTime.substr(8,2) + "-" + gpsTime.substr(10,2) + " " + gpsTime.substr(12,2) + ":" + gpsTime.substr(14,2) + ":" + gpsTime.substr(16,2));
   return;
 }
 
