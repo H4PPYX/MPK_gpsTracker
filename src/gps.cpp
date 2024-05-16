@@ -24,7 +24,7 @@ void GPS::updateGPSdata() {
 ////////////////////////////////////////////////////////////////////////////////
 
 
-        GPS::sim7000.Send_AT_Command("AT+CGNSPWR=1",2000,"OK")
+        GPS::sim7000.Send_AT_Command("AT+CGNSPWR=1",2000,"OK");
         char answer = 0;
         char x = 0;
         char gps_buffer[200];
@@ -32,7 +32,7 @@ void GPS::updateGPSdata() {
         delay(2000);
         while(answer == 0) {
 
-          GPS::sim7000.Send_AT_Command("AT+CGNSINF",2000,"+CGNSINF: ")
+          GPS::sim7000.Send_AT_Command("AT+CGNSINF",2000,"+CGNSINF: ");
           while(Serial.available()==0);
 
           do {
