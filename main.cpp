@@ -10,11 +10,11 @@ int main() {
   sim7x00 sim7000 = sim7x00();
   GPS track(sim7000);
   std::ofstream file;
-  file.open("output.txt");
+  file.open("output.txt", std::ios_base::app);
 
   while(true){
     track.updateGPSdata();
-    std::cout<<track.getGPSdata()<<std::endl;
+    //std::cout<<track.getGPSdata()<<std::endl;
     file<<track.getGPSdata()<<std::endl;
     //std::cout<<conf.getVehID()<<";"<<conf.getServIP()<<std::endl;
     delay(1000);
