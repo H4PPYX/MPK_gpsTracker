@@ -3,7 +3,7 @@
 #include "sim7x00.h"
 
 GPS::GPS(sim7x00 device): sim7000(device) {
-    GPS::sim7000.Power_On();
+    while(GPS::sim7000.Power_On()==false); //make sure it works
 }
 GPS::~GPS(){}
 //std::string GPS::gps_lat;
@@ -30,9 +30,6 @@ void GPS::fetchLon(std::string buffer) {
 }
 
 void GPS::updateGPSdata() {
-
-////////////////////////////////////////////////////////////////////////////////
-
 
         GPS::sim7000.Send_AT_Command("AT+CGNSPWR=1",2000,"OK");
         char answer = 0;
@@ -72,9 +69,6 @@ void GPS::updateGPSdata() {
         }
 
         GPS::sim7000.Send_AT_Command("AT+CGNSPWR=0",2000,"OK");
-
-
-////////////////////////////////////////////////////////////////////////////////
 
   GPS::fetchLat(gps_buffer);
   GPS::fetchLon(gps_buffer);
