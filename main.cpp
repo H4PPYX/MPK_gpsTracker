@@ -14,7 +14,7 @@ int main() {
 
   while(true){
     track.updateGPSdata();
-    std::string = dataline = track.getGPSdata();
+    std::string dataline = track.getGPSdata();
     std::cout<<dataline<<std::endl;
     file<<dataline<<std::endl;
     //std::cout<<conf.getVehID()<<";"<<conf.getServIP()<<std::endl;
