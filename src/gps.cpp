@@ -30,7 +30,7 @@ void GPS::fetchLon(std::string buffer) {
 
 void GPS::updateGPSdata() {
 
-        GPS::sim7000.Send_AT_Command("AT+CGNSPWR=1",2000,"OK");
+        while(GPS::sim7000.Send_AT_Command("AT+CGNSPWR=1",2000,"OK")==false); //just to make sure, that it will work
         char answer = 0;
         char x = 0;
         char gps_buffer[200];
@@ -67,7 +67,7 @@ void GPS::updateGPSdata() {
 
         }
 
-        GPS::sim7000.Send_AT_Command("AT+CGNSPWR=0",2000,"OK");
+        while(GPS::sim7000.Send_AT_Command("AT+CGNSPWR=0",2000,"OK")==false); //to avoid trouble if it doesn't turn off correctly
 
   GPS::fetchLat(gps_buffer);
   GPS::fetchLon(gps_buffer);
