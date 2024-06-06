@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include "arduPi.h"
 #include "sim7x00.h"
