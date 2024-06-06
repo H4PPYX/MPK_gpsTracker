@@ -1,4 +1,4 @@
-#include "WiFiSend.h"
+//#include "WiFiSend.h"
 
 WiFiSend::WiFiSend(sim7x00 device, Config data): sim7000(device), initials(data){}
 
