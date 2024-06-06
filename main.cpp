@@ -1,4 +1,3 @@
-#include "config.h"
 #include "gps.h"
 #include "connection.h"
 #include <iostream>
@@ -22,7 +21,7 @@ int main() {
     //std::cout<<conf.getVehID()<<";"<<conf.getServIP()<<std::endl;
     delay(1000);
   }
-  
+
   file.close();
   return 0;
 }
