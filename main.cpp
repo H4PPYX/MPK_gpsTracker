@@ -14,7 +14,7 @@ int main() {
 
   while(true){
     track.updateGPSdata();
-    std::string temp = conf.getVehID() + ";" + track.getGPSdata()
+    std::string temp = conf.getVehID() + ";" + track.getGPSdata();
     system("curl --header \"Content-Type: text/plain\" --request POST --data \"" + temp + "\" http://" + conf.getServIP() + "/vehiclepositions");
     std::cout<<temp<<std::endl;
     //file<<track.getGPSdata()<<std::endl;
