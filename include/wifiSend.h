@@ -8,4 +8,4 @@ class WiFiSend : public Connection {
   protected:
     sim7x00 &sim7000;
     Config &initials;
-}
+};
