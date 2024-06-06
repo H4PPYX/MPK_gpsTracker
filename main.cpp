@@ -1,5 +1,6 @@
 #include "gps.h"
 #include "wifiSend.h"
+#include "connection.h"
 #include <iostream>
 #include <fstream>
 
