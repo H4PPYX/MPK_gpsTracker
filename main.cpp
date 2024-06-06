@@ -24,7 +24,6 @@ int main() {
     delay(1000);
   }
 
-  ~sender();
   file.close();
   return 0;
 }
