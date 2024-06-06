@@ -1,6 +1,6 @@
 #include "wifiSend.h"
 
-WiFiSend::WiFiSend(sim7x00 device, Config data): sim7000(device), initials(data){
+WiFiSend::WiFiSend(Config data): initials(data){
   WiFiSend::send("start;3_00099876");
 }
 
