@@ -1,4 +1,3 @@
-#pragma once
 #include "connection.h"
 
 class WiFiSend : public Connection {
