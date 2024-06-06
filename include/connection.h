@@ -5,8 +5,8 @@
 
 class Connection {
   public:
-    bool send(std::string data) {return 0};
+    bool send(std::string data) {return 0;};
   protected:
     sim7x00 &sim7000;
     Config &initials;
-}
+};
