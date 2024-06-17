@@ -1,3 +1,5 @@
+#### repository created as a part of team project "Mapa Utrudnień MPK"
+
 # MPK GPS Tracker
 
 The device designed for real-time vehicle GPS tracking and sending the data to remote backend server. 
